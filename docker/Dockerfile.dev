@@ -17,7 +17,7 @@ ENV NODE_ENV=production
 # 設定環境變數
 ENV VITE_ENV=dev
 ENV VITE_NAME=dev
-ENV VITE_API_URL=https://localdb-1w4g.onrender.com
+ENV VITE_API_URL=https://local-db.vercel.app
 ENV VITE_API=/api2
 ENV VITE_BASE_URL=/dev/m-cloud
 ENV VITE_MINIFY=esbuild
@@ -35,7 +35,7 @@ COPY --from=builder /app/dist/${VITE_NAME} /usr/share/nginx/html/${VITE_NAME}
 
 # 設定環境變數（避免 `envsubst` 無法替換）
 ENV VITE_NAME=dev
-ENV VITE_API_URL=https://localdb-1w4g.onrender.com
+ENV VITE_API_URL=https://local-db.vercel.app
 ENV VITE_API=/api2
 
 # 複製 Nginx 配置模板

@@ -15,11 +15,11 @@ if (!PROD) {
   console.log(`壓縮模式`);
   // ~ 方法01 出來會是 /api2/users
   // 需透過 nginx 反向代理 抓/api2
-  // 再轉成 https://localdb-1w4g.onrender.com/api2/users
+  // 再轉成 https://local-db.vercel.app/api2/users
   apiServer = `${VITE_API ?? ''}`;
 
   // ~ 方法02 直接使用 正式網址
-  // https://localdb-1w4g.onrender.com/api2/users
+  // https://local-db.vercel.app/api2/users
   // apiServer = `${VITE_API_URL ?? ''}${VITE_API ?? ''}`;
 }
 
